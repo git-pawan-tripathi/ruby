@@ -1,0 +1,8 @@
+<h1>main</h1>
+<!--
+<%= link_to "Logout",logout_path,method: :delete, class: "btn btn-primary" %>
+this is not in the form
+-->
+ <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert alert-info" %>
+  <% end %>

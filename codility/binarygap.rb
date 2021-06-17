@@ -1,15 +1,13 @@
 def solution(n)
   n="%b" % n
   k=0
-  p n
-  n=n.scan(/(10{1,})+1/)
-  p n
+  n=n.scan(/1(0+)(?=1)/)
   n.each do |i|
     if k<i[0].length
       k=i[0].length
     end
   end
-  return k==0 ? 0:k-2
+  return k
 end
 
-p solution(328)
+p solution(15)
