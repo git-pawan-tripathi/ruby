@@ -9,6 +9,12 @@
 
     <% end %>
 
+    <% if flash[:notice] %>
+            <div class="alert alert-info">
+                <strong>Danger!</strong><%= flash[:notice] %>
+            </div>
+
+    <% end %>
     <div class="form-group">
       <%= form.label :email %>
       <%= form.text_field :email,class: "form-control", placeholder: "Enter email" %>
